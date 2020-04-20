@@ -1,3 +1,4 @@
+@import "mixins";
 @import "typography";
 
 ordercycle {
@@ -17,7 +18,7 @@ ordercycle {
     margin-right: 0.3rem;
   }
 
-  @media all and (max-width: 1024px) {
+  @include breakpoint(desktop) {
     float: none;
     padding: 0.5em 1em;
     width: 100%;
@@ -33,7 +34,7 @@ ordercycle {
     }
   }
 
-  @media all and (max-width: 480px) {
+  @include breakpoint(mobile) {
     padding: 0.5em 1em 0.75em;
   }
 
@@ -75,7 +76,7 @@ ordercycle {
       border-radius: 0 0.25em 0.25em 0;
       min-width: 13em;
 
-      @media all and (max-width: 480px) {
+      @include breakpoint(mobile) {
         width: 100%;
         min-width: 0;
       }
@@ -85,17 +86,17 @@ ordercycle {
       color: $grey-700;
     }
 
-    @media all and (max-width: 1024px) {
+    @include breakpoint(desktop) {
       float: none;
       margin-right: 1em;
     }
 
-    @media all and (max-width: 768px) {
+    @include breakpoint(tablet) {
       float: none;
       margin-right: 0;
     }
 
-    @media all and (max-width: 480px) {
+    @include breakpoint(mobile) {
       display: flex;
     }
   }
@@ -108,7 +109,7 @@ ordercycle {
     padding: 0.5em 0;
 
     span {
-      @media all and (max-width: 768px) {
+      @include breakpoint(tablet) {
         font-size: 0.875em;
       }
     }
@@ -142,7 +143,7 @@ shop ordercycle {
     color: $white;
     padding: 0 0 12px;
 
-    @media all and (max-width: 1024px) {
+    @include breakpoint(desktop) {
       float: none;
       display: inline-block;
       padding: 0.2em 0 0;
@@ -150,7 +151,7 @@ shop ordercycle {
       margin-right: 1em;
     }
 
-    @media all and (max-width: 768px) {
+    @include breakpoint(tablet) {
       float: none;
       padding: 0 0 10px;
     }
